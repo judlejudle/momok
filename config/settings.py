@@ -30,7 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-CUSTOM_APPS = ["users.apps.UsersConfig"]
+CUSTOM_APPS = [
+    "users.apps.UsersConfig",
+    "restaurants.apps.RestaurantsConfig",
+]
 
 SYSTEM_APPS = [
     "django.contrib.admin",
