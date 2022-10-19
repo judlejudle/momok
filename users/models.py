@@ -2,6 +2,7 @@ from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator, MinValueValidator
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class User(AbstractUser):
@@ -16,4 +17,12 @@ class User(AbstractUser):
     pricerange2 = models.IntegerField(
         default=15000,
         validators=[MinValueValidator(pricerange1), MaxValueValidator(300000)],
+    )
+    phone = PhoneNumberField(
+        unique=True,
+    )
+    egg = models.IntegerField(default=2)
+    restaurants = models.ManyToManyField(
+        "restaurants.Restaurant",
+        related_name="restaurant",
     )

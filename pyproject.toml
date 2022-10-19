@@ -10,6 +10,9 @@ packages = [{include = "momok_backend"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 Django = "^4.1.1"
+django-phonenumber-field = "^7.0.0"
+django-phonenumbers = "^1.0.1"
+djangorestframework = "^3.14.0"
 
 
 [tool.poetry.group.dev.dependencies]

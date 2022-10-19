@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 CUSTOM_APPS = [
     "users.apps.UsersConfig",
     "restaurants.apps.RestaurantsConfig",
+    "reviews.apps.ReviewsConfig",
 ]
 
 SYSTEM_APPS = [
@@ -44,7 +45,13 @@ SYSTEM_APPS = [
     "django.contrib.staticfiles",
 ]
 
-INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS
+THIRDPARTY_APPS = [
+    "phonenumbers",
+    "rest_framework",
+]
+
+
+INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS + THIRDPARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
